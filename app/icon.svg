@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ixBadge" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1A2C55" />
+      <stop offset="100%" stop-color="#0D1117" />
+    </linearGradient>
+    <linearGradient id="ixChevron" x1="14" y1="16" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8AB4FF" />
+      <stop offset="100%" stop-color="#5B8DEF" />
+    </linearGradient>
+    <radialGradient id="ixSpark" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#FFC0AB" />
+      <stop offset="100%" stop-color="#FF7A59" />
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#ixBadge)" />
+  <path
+    d="M17 19 L30 32 L17 45"
+    stroke="url(#ixChevron)"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <rect x="33" y="40" width="16" height="6" rx="3" fill="url(#ixChevron)" />
+  <path
+    d="M47 10 L49.3 16.7 L56 19 L49.3 21.3 L47 28 L44.7 21.3 L38 19 L44.7 16.7 Z"
+    fill="url(#ixSpark)"
+  />
+</svg>
