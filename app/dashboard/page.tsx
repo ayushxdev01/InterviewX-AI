@@ -45,6 +45,17 @@ export default async function DashboardPage() {
         <DashboardIntro name={user.user_metadata?.full_name || user.email} />
         <DashboardAnalytics interviews={pastInterviews || []} />
         <ResumeUpload initialResume={existingResume} />
+
+        <footer className="mt-16 pt-6 border-t border-border/60 text-center">
+          <a
+            href="https://github.com/ayushxdev01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted hover:text-signal transition-colors"
+          >
+            Developed by Ayush Gupta
+          </a>
+        </footer>
       </div>
     </main>
   );
