@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
 import { Logo } from "../components/Logo";
 import { MagneticButton } from "../components/MagneticButton";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState(false);
@@ -30,7 +31,11 @@ export default function LoginForm() {
   }
 
   return (
-    <main className="grid-texture min-h-screen flex items-center justify-center px-6">
+    <main className="grid-texture min-h-screen flex items-center justify-center px-6 relative">
+      <div className="absolute top-6 right-6">
+        <ThemeToggle />
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

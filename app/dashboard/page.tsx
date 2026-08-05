@@ -1,10 +1,12 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { Logo } from "../components/Logo";
+import { ThemeToggle } from "../components/ThemeToggle";
 import SignOutButton from "./sign-out-button";
 import ResumeUpload from "./resume-upload";
 import DashboardIntro from "./dashboard-intro";
 import DashboardAnalytics from "./dashboard-analytics";
+import { Scene3D } from "../components/Scene3D";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -32,31 +34,38 @@ export default async function DashboardPage() {
     .order("created_at", { ascending: true });
 
   return (
-    <main className="min-h-screen grid-texture">
+    <main className="min-h-screen grid-texture relative overflow-hidden">
+      <Scene3D opacity={0.9} />
       <nav className="flex items-center justify-between px-6 md:px-12 py-5 border-b border-border/60">
         <div className="flex items-center gap-2 font-display font-semibold text-lg">
           <Logo size={26} />
           InterviewX <span className="text-signal">AI</span>
         </div>
-        <SignOutButton />
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <SignOutButton />
+        </div>
       </nav>
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 py-16">
         <DashboardIntro name={user.user_metadata?.full_name || user.email} />
         <DashboardAnalytics interviews={pastInterviews || []} />
         <ResumeUpload initialResume={existingResume} />
+      </div>
 
-        <footer className="mt-16 pt-6 border-t border-border/60 text-center">
+      <footer className="px-6 md:px-12 py-8 border-t border-border/60 flex justify-center">
+        <p className="text-sm text-muted">
+          Developed by{" "}
           <a
             href="https://github.com/ayushxdev01"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-muted hover:text-signal transition-colors"
+            className="font-semibold text-signal hover:underline"
           >
-            Developed by Ayush Gupta
+            Ayush Gupta
           </a>
-        </footer>
-      </div>
+        </p>
+      </footer>
     </main>
   );
 }

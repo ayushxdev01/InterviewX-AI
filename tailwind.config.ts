@@ -5,15 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: "#0D1117",
-        panel: "#161B22",
-        panel2: "#1C2129",
-        border: "#2A3038",
-        ink: "#E6EDF3",
-        muted: "#8B949E",
-        signal: "#5B8DEF",
-        confidence: "#FF7A59",
-        pass: "#3DDC97",
+        base: "rgb(var(--color-base) / <alpha-value>)",
+        panel: "rgb(var(--color-panel) / <alpha-value>)",
+        panel2: "rgb(var(--color-panel2) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        signal: "rgb(var(--color-signal) / <alpha-value>)",
+        confidence: "rgb(var(--color-confidence) / <alpha-value>)",
+        pass: "rgb(var(--color-pass) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)", "sans-serif"],

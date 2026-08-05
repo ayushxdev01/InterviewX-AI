@@ -14,8 +14,9 @@ import {
 import { MagneticButton } from "./components/MagneticButton";
 import { TiltCard } from "./components/TiltCard";
 import { Logo } from "./components/Logo";
+import { Scene3D } from "./components/Scene3D";
+import { ThemeToggle } from "./components/ThemeToggle";
 
-// ---- Signature element: animated mock-interview terminal ----
 function InterviewTerminal() {
   const script = [
     { role: "ai", text: "I see you built a React + Node job board. Walk me through how you handled real-time updates." },
@@ -32,7 +33,6 @@ function InterviewTerminal() {
 
   return (
     <TiltCard maxTilt={6} className="w-full max-w-md rounded-xl">
-      {/* animated conic-gradient glow border */}
       <div className="absolute -inset-[1px] rounded-xl opacity-60 animate-[spin_6s_linear_infinite] [background:conic-gradient(from_0deg,transparent_0%,#5B8DEF_15%,transparent_35%)] pointer-events-none" />
       <div className="relative rounded-xl border border-border bg-panel shadow-2xl shadow-black/40 overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-panel2">
@@ -88,12 +88,15 @@ function NavBar() {
         <a href="#features" className="hover:text-ink transition-colors">Features</a>
         <a href="#how" className="hover:text-ink transition-colors">How it works</a>
       </div>
-      <MagneticButton
-        onClick={() => router.push("/login")}
-        className="rounded-lg bg-signal font-medium text-sm px-4 py-2 hover:bg-signal/90 text-white [--tw-shadow-color:theme(colors.signal)]"
-      >
-        Get Started
-      </MagneticButton>
+      <div className="flex items-center gap-3">
+        <ThemeToggle />
+        <MagneticButton
+          onClick={() => router.push("/login")}
+          className="rounded-lg bg-signal font-medium text-sm px-4 py-2 hover:bg-signal/90 text-white [--tw-shadow-color:theme(colors.signal)]"
+        >
+          Get Started
+        </MagneticButton>
+      </div>
     </nav>
   );
 }
@@ -249,19 +252,33 @@ function HowItWorks() {
 
 function Footer() {
   return (
-    <footer className="px-6 md:px-12 py-10 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div className="flex items-center gap-2 font-display font-semibold">
-        <Logo size={20} />
-        InterviewX AI
+    <footer className="px-6 md:px-12 py-10 border-t border-border/60 flex flex-col items-center gap-5">
+      <div className="flex items-center justify-between w-full max-w-7xl mx-auto flex-col md:flex-row gap-4">
+        <div className="flex items-center gap-2 font-display font-semibold">
+          <Logo size={20} />
+          InterviewX AI
+        </div>
+        <p className="text-muted text-sm">Practice. Analyze. Improve. Get Hired.</p>
       </div>
-      <p className="text-muted text-sm">Practice. Analyze. Improve. Get Hired.</p>
+      <p className="text-sm text-muted">
+        Developed by{" "}
+        <a
+          href="https://github.com/ayushxdev01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-signal hover:underline"
+        >
+          Ayush Gupta
+        </a>
+      </p>
     </footer>
   );
 }
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative overflow-hidden">
+      <Scene3D opacity={0.5} />
       <NavBar />
       <Hero />
       <Features />

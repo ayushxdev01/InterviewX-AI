@@ -178,9 +178,9 @@ export default function InterviewChat({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col h-[75vh] rounded-xl border border-border bg-panel overflow-hidden"
+      className="flex flex-col h-[75vh] rounded-xl border border-border bg-panel/10 backdrop-blur-md overflow-hidden"
     >
-      <div className="px-5 py-3 border-b border-border bg-panel2 flex items-center justify-between">
+      <div className="px-5 py-3 border-b border-border bg-panel2/30 backdrop-blur-md flex items-center justify-between">
         <span className="font-mono text-xs text-muted">interview_session.ai</span>
         <div className="flex items-center gap-4">
           <span className="font-mono text-xs text-signal">
@@ -295,8 +295,8 @@ export default function InterviewChat({
                 <div
                   className={`max-w-[80%] rounded-xl px-4 py-3 text-sm ${
                     m.role === "ai"
-                      ? "bg-panel2 border border-border text-ink"
-                      : "bg-signal text-white"
+                    ? "bg-panel2/40 backdrop-blur-sm border border-border text-ink"
+                    : "bg-signal text-white"
                   }`}
                 >
                   {m.content}
@@ -326,12 +326,14 @@ export default function InterviewChat({
               >
                 View Feedback Report
               </button>
-              <button
-                onClick={downloadTranscript}
-                className="flex items-center gap-2 rounded-lg border border-border text-sm px-4 py-2.5 hover:border-signal/40 transition-colors"
-              >
-                <Download size={15} /> Transcript
-              </button>
+              <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.96 }}
+  onClick={downloadTranscript}
+  className="flex items-center gap-2 rounded-lg border border-border text-sm px-4 py-2.5 hover:border-signal/40 transition-colors"
+>
+  <Download size={15} /> Transcript
+</motion.button>
             </div>
           </div>
         )}

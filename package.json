@@ -20,12 +20,14 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "^2.13.3",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.160.1"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
