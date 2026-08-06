@@ -278,7 +278,13 @@ function Footer() {
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
-      <BackgroundMedia src="/backgrounds/landing-bg.mp4" video overlay={0.5} />
+      <BackgroundMedia
+        src="/backgrounds/landing-bg.mp4"
+        video
+        opacity={0.85}
+        overlay={0.2}
+        scale={1}
+      />
       <NavBar />
       <Hero />
       <Features />
