@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import { Logo } from "../components/Logo";
 import { MagneticButton } from "../components/MagneticButton";
 import { ThemeToggle } from "../components/ThemeToggle";
+import { BackgroundMedia } from "../components/BackgroundMedia";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,7 @@ export default function LoginForm() {
 
   return (
     <main className="grid-texture min-h-screen flex items-center justify-center px-6 relative">
+      <BackgroundMedia src="/backgrounds/login-bg.png" />
       <div className="absolute top-6 right-6">
         <ThemeToggle />
       </div>

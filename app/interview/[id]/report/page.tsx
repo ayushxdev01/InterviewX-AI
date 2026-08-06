@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { Logo } from "../../../components/Logo";
 import ReportView from "./report-view";
+import { BackgroundMedia } from "../../../components/BackgroundMedia";
 
 export default async function ReportPage({
   params,
@@ -28,6 +29,7 @@ export default async function ReportPage({
 
   return (
     <main className="min-h-screen grid-texture">
+      <BackgroundMedia src="/backgrounds/feedback-bg.png" />
       <nav className="flex items-center justify-between px-6 md:px-12 py-5 border-b border-border/60">
         <div className="flex items-center gap-2 font-display font-semibold text-lg">
           <Logo size={26} />

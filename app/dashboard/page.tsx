@@ -6,7 +6,7 @@ import SignOutButton from "./sign-out-button";
 import ResumeUpload from "./resume-upload";
 import DashboardIntro from "./dashboard-intro";
 import DashboardAnalytics from "./dashboard-analytics";
-import { Scene3D } from "../components/Scene3D";
+import { BackgroundMedia } from "../components/BackgroundMedia";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -35,7 +35,7 @@ export default async function DashboardPage() {
 
   return (
     <main className="min-h-screen grid-texture relative overflow-hidden">
-      <Scene3D opacity={0.9} />
+      <BackgroundMedia src="/backgrounds/dashboard-bg.mp4" video overlay={0.7} />
       <nav className="flex items-center justify-between px-6 md:px-12 py-5 border-b border-border/60">
         <div className="flex items-center gap-2 font-display font-semibold text-lg">
           <Logo size={26} />

@@ -14,7 +14,7 @@ import {
 import { MagneticButton } from "./components/MagneticButton";
 import { TiltCard } from "./components/TiltCard";
 import { Logo } from "./components/Logo";
-import { Scene3D } from "./components/Scene3D";
+import { BackgroundMedia } from "./components/BackgroundMedia";
 import { ThemeToggle } from "./components/ThemeToggle";
 
 function InterviewTerminal() {
@@ -278,7 +278,7 @@ function Footer() {
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
-      <Scene3D opacity={0.5} />
+      <BackgroundMedia src="/backgrounds/landing-bg.mp4" video overlay={0.5} />
       <NavBar />
       <Hero />
       <Features />

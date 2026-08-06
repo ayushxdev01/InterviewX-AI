@@ -1,9 +1,9 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { Logo } from "../../components/Logo";
-import { Scene3D } from "../../components/Scene3D";
 import { ThemeToggle } from "../../components/ThemeToggle";
 import InterviewChat from "./interview-chat";
+import { BackgroundMedia } from "../../components/BackgroundMedia";
 
 export default async function InterviewPage({
   params,
@@ -29,7 +29,13 @@ export default async function InterviewPage({
 
   return (
     <main className="min-h-screen grid-texture relative overflow-hidden">
-      <Scene3D opacity={0.45} />
+      <BackgroundMedia
+        src="/backgrounds/interview-bg.mp4"
+        video
+        opacity={2.0}
+        overlay={0.75}
+        scale={1.5}
+      />
       <nav className="flex items-center justify-between px-6 md:px-12 py-5 border-b border-border/60">
         <div className="flex items-center gap-2 font-display font-semibold text-lg">
           <Logo size={26} />
