@@ -21,7 +21,7 @@
 
 <div>
 
-[![Live Demo](https://img.shields.io/badge/🔴_Live_Demo-5B8DEF?style=for-the-badge&logoColor=0D1117&labelColor=0D1117)](https://your-deployed-link.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🔴_Live_Demo-5B8DEF?style=for-the-badge&logoColor=0D1117&labelColor=0D1117)]([https://your-deployed-link.vercel.app/](https://interviewx-ai-ayushxdev.vercel.app/))
 [![Report Bug](https://img.shields.io/badge/Report_Bug-FF7A59?style=for-the-badge&labelColor=161B22&color=161B22)](https://github.com/ayushxdev01/InterviewX-AI/issues)
 [![Request Feature](https://img.shields.io/badge/Request_Feature-3DDC97?style=for-the-badge&labelColor=161B22&color=161B22)](https://github.com/ayushxdev01/InterviewX-AI/issues)
 
